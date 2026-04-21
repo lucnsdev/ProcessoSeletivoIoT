@@ -1,28 +1,4 @@
-'''
------------------------------------- OBSERVAÇÃO ---------------------------------
-
-                ESTE SIMULADOR (WOKWI) É EXTREMAMENTE LENTO.
-
-Neste projeto é usado a função 'time.ticks_ms()' no arquivo 'scheduler_time.py' 
-para capturar o tempo decorrido em milisegundos e usar no non-blocking delay. 
-Mas o uso continuo dela afeta no desempenho. 
-A velocidade de simulação cai para 20%.
-
-Ela é usada para gerenciar a contagem de tempo sem travar o restante do sistema.
-Se não usar non-blocking delay fica dificil capturar os clicks dos botões. 
-Foi dificil construir esse projeto por mais que seja "um mero semaforo". 
-Pois o WOKWI não mostra os stacktraces corretamente. 
-Mensiona linhas inexistentes e mostra na saída apenas o nome da função principal. 
-Também há muitos bugs na simulação do circuito eletrico. 
-Como por exemplo, não detecta curto-circuitos. A pinagem real do Raspberry PI PICO
-não condiz com a real.
-
-Importante:
-    Para desativar o non-blocking e testar o circuito mais rapido, 
-    basta descomentar a linha 12 do 'scheduler_time.py'.
-----------------------------------------------------------------------------------
-
-'''
+# @Developed by @lucns
 
 import time
 from tm1637 import TM1637
@@ -30,19 +6,17 @@ from machine import Pin
 from button import Button
 from scheduler_time import Scheduler
 
-display = TM1637(clk=Pin(21), dio=Pin(20))
-button = Button(1)
+display = TM1637(clk=Pin(12), dio=Pin(13))
+button = Button(18)
 scheduler = Scheduler()
 
-buzzer = Pin(28, Pin.OUT);
-led_pins = [2, 3, 4, 6, 7, 8]
-leds = [Pin(pin, Pin.OUT) for pin in led_pins]
-aGreen = leds[2]
-aYellow = leds[1]
-aRed = leds[0]
-bGreen = leds[5]
-bYellow = leds[4]
-bRed = leds[3]
+buzzer = Pin(19, Pin.OUT);
+aGreen = Pin(23, Pin.OUT)
+aYellow = Pin(22, Pin.OUT)
+aRed = Pin(21, Pin.OUT)
+bGreen = Pin(5, Pin.OUT)
+bYellow = Pin(4, Pin.OUT)
+bRed = Pin(2, Pin.OUT)
 
 timePedestrian = 8
 timeGreen = 10
@@ -57,16 +31,16 @@ def showInDisplay(number):
 def runLightsLogic():
     state = 0
     goToPedestrianMode = False
-    aRed.high() 
-    bRed.high()
+    aRed.on() 
+    bRed.on()
     while True:
         if state == 0: # verde
             if avenue == 'A':
-                aRed.low() 
-                aGreen.high()
+                aRed.off() 
+                aGreen.on()
             else: 
-                bRed.low() 
-                bGreen.high()
+                bRed.off() 
+                bGreen.on()
             timeCounter = 0
             scheduler.schedule(timeGreen) # agendar contagem regressiva
             while not scheduler.thrigger():
@@ -82,11 +56,11 @@ def runLightsLogic():
             state = 2
         elif state == 2: # amarelo
             if avenue == 'A': 
-                aGreen.low()
-                aYellow.high()
+                aGreen.off()
+                aYellow.on()
             else:
-                bGreen.low()
-                bYellow.high()
+                bGreen.off()
+                bYellow.on()
             timeCounter = 0
             scheduler.schedule(timeYellow) # agendar contagem regressiva
             while not scheduler.thrigger():
@@ -100,11 +74,11 @@ def runLightsLogic():
         elif state == 3: # vermelho
             if goToPedestrianMode: print("Em modo pedestre.")
             if avenue == 'A': 
-                aYellow.low()
-                aRed.high()
+                aYellow.off()
+                aRed.on()
             else:
-                bYellow.low()
-                bRed.high()
+                bYellow.off()
+                bRed.on()
             timeCounter = 0
             scheduler.schedule(timeRed) # agendar contagem regressiva
             while not scheduler.thrigger():
@@ -112,17 +86,19 @@ def runLightsLogic():
                 if timeCounter != tc: # atualiza o display somente se a contagem mudar
                     timeCounter = tc
                     showInDisplay(tc)
-                    if goToPedestrianMode: print("Saindo do modo pedestre em " + str(tc) + "s.");
-                    else: print("Saindo do vermelho em " + str(tc) + "s.");
-                    buzzer.toggle()
-            buzzer.low();
+                    if goToPedestrianMode: 
+                      print("Saindo do modo pedestre em " + str(tc) + "s.");
+                      buzzer.value(not buzzer.value())
+                    else: 
+                      print("Saindo do vermelho em " + str(tc) + "s.");
+            buzzer.off();
             goToPedestrianMode = False
             state = 0
             break
 
 # ------------------------- main ------------------------ #
 def main():
-    buzzer.low();
+    buzzer.off();
     display.write([0, 0, 0, 0])
     global avenue
     while (True):
@@ -139,4 +115,3 @@ def main():
 
 if __name__ == '__main__':
     main()
-  

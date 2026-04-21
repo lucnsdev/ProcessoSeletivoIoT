@@ -9,7 +9,6 @@ class Scheduler:
         self.scheduledTime = time.ticks_ms() + (seconds * 1000)
 
     def getTime(self):
-        #time.sleep_ms(500); # DESCOMENTAR PARA DESATIVAR O NON-BLOCKING
         t = int((self.scheduledTime - time.ticks_ms()) / 1000)
         if t < 0: t = 0
         return t
