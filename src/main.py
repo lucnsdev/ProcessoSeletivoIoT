@@ -124,20 +124,7 @@ def runLightsLogic():
 
 # ------------------------- main ------------------------ #
 def main():
-    buzzer.low();
-    display.write([0, 0, 0, 0])
-    global avenue
-    while (True):
-        runLightsLogic()
-        if avenue == 'A': avenue = 'B'
-        else: avenue = 'A'
-
-        print("Dois vermelhos por 2 segundos.")
-        showInDisplay(2);
-        time.sleep(1)
-        showInDisplay(1);
-        time.sleep(1)
-        showInDisplay(0);
+    print("testing actions")
 
 if __name__ == '__main__':
     main()
