@@ -103,7 +103,7 @@ def main():
     buzzer.off();
     display.write([0, 0, 0, 0])
     global avenue
-    while (True): # Se ativar o loop o Github Actions dá timeout
+    while (True):
         runLightsLogic()
         if avenue == 'A': avenue = 'B'
         else: avenue = 'A'
