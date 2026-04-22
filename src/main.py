@@ -1,6 +1,6 @@
 # @Developed by @lucns
 
-print("Simulacao finalizada.") # Sem isso o Github Actions rejeita a importação de arquivos secundarios.
+print("Teste") # Sem isso o Github Actions rejeita a importação de arquivos secundarios.
 
 import time
 from tm1637 import TM1637
