@@ -31,5 +31,5 @@ jobs:
       with:
         token: ${{ secrets.WOKWI_CLI_TOKEN }}
         path: .
-        expect_text: 'Teste'
+        expect_text: 'Simulacao finalizada.'
         timeout: 60000
