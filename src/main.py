@@ -103,17 +103,17 @@ def main():
     buzzer.off();
     display.write([0, 0, 0, 0])
     global avenue
-    #while (True): # Se ativar o loop o Github Actions dá timeout
-    runLightsLogic()
-    if avenue == 'A': avenue = 'B'
-    else: avenue = 'A'
-
-    print("Dois vermelhos por 2 segundos.")
-    showInDisplay(2);
-    time.sleep(1)
-    showInDisplay(1);
-    time.sleep(1)
-    showInDisplay(0);
+    while (True): # Se ativar o loop o Github Actions dá timeout
+        runLightsLogic()
+        if avenue == 'A': avenue = 'B'
+        else: avenue = 'A'
+    
+        print("Dois vermelhos por 2 segundos.")
+        showInDisplay(2);
+        time.sleep(1)
+        showInDisplay(1);
+        time.sleep(1)
+        showInDisplay(0);
 
 if __name__ == '__main__':
     main()
