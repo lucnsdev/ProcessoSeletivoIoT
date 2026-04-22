@@ -1,7 +1,5 @@
 # @Developed by @lucns
 
-print("Teste!") # pelo visto o actions nao funciona sem isso.
-
 import time
 from tm1637 import TM1637
 from machine import Pin
@@ -103,17 +101,18 @@ def main():
     buzzer.off();
     display.write([0, 0, 0, 0])
     global avenue
-    while (True):
-        runLightsLogic()
-        if avenue == 'A': avenue = 'B'
-        else: avenue = 'A'
+    #while (True):
+    runLightsLogic()
+    if avenue == 'A': avenue = 'B'
+    else: avenue = 'A'
 
-        print("Dois vermelhos por 2 segundos.")
-        showInDisplay(2);
-        time.sleep(1)
-        showInDisplay(1);
-        time.sleep(1)
-        showInDisplay(0);
+    print("Dois vermelhos por 2 segundos.")
+    showInDisplay(2);
+    time.sleep(1)
+    showInDisplay(1);
+    time.sleep(1)
+    showInDisplay(0);
 
 if __name__ == '__main__':
     main()
+    print("Simulacao finalizada.")
