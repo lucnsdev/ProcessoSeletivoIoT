@@ -34,7 +34,8 @@
 <br>
 <img width="240" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
 <img width="240" alt="Screenshot_20260424_132744_PNAAT IoT Project" src="https://github.com/user-attachments/assets/0f7ec971-1ac0-44c2-b2a1-438b9d3b9825" />
-<img width="240" alt="Captura de tela 2026-04-24 161016" src="https://github.com/user-attachments/assets/6333076c-8c26-4f50-8c49-0cffcb7ee5fa" />
+<img width="240" height="465" alt="Captura de tela 2026-04-24 161216" src="https://github.com/user-attachments/assets/fce0e2ee-1189-41ce-835e-31b116f0b740" />
+
 
 
 ---
