@@ -30,7 +30,7 @@
 - O angulo de inclinação do eixo do servo motor é controlado pela ArcSeekBar do app.
 - O Esp32 se conecta a rede virtual WiFi, depois se conecta ao Broker e envia/recebe os dados no formato JSON e extrai os dados de controle para controlar os periféricos de saída.
 - O usuário interage com o simulador alterando os valores do sensor de temperatura e humidade, também  é possível interagir através do array de switch's que há no circuito, e claro, por meio do App Android disponibilizado o APK no Google Drive e repositório do Github:
-- [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
+- [App Estação Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
 - [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
 <img width="240" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
