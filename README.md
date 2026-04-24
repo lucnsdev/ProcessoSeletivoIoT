@@ -88,7 +88,10 @@ Descreva o comportamento final do sistema:
 
 ## 6️⃣ Comentários Adicionais (Opcional)
 
-- A unica dificuldade foi entender qual o problema do Actions.  
-- As limitações se dá por conta dos poucos componentes existentes no WOKWI e também a lentidão nas simulações. Como sujestão deixo o [TinckerCad](https://www.tinkercad.com/circuits).
-- Melhorias que você faria com mais tempo  
-- Principais aprendizados durante o desafio
+- A unica dificuldade foi entender qual o problema do Actions.
+- O projeto em si não me deu trabalho.
+- As limitações ocorridas se dá por conta dos poucos componentes existentes no WOKWI e também a lentidão nas simulações. Como sujestão deixo o [TinckerCad](https://www.tinkercad.com/circuits).
+- O aprendizado que tiro nesse projeto foi como passar menos raiva com o Actions e o WOKWI juntos.
+- Me considero muito capaz de ajudar e impulsionar o projeto se eu for um dos selecionados.
+- Já pode me dá essa bolsa pelo trabalho no app e no simulador super cheio de limitações kkkkk :D
+- Desde já agradeço a possibilidade de concorrer.
