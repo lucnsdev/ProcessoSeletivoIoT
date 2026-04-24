@@ -2,19 +2,13 @@
 
 # ESTAÇÂO METEREOLOGICA <img width="48" height="48" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
 
-
----
-
 ### 👤 Identificação do Candidato
-
 - **Nome completo:**  LUCAS DO NASCIMENTO SOUZA
 - **GitHub:**  https://github.com/lucnsdev/sobre-o-lucas
 
 ---
 
 ## 1️⃣ Visão Geral da Solução
-
-
 - O objetivo é demostrar o funcionamento de uma simples estação metereologica com visualização dos dados e controle dos periféricos via App Android.
 - O sistema embarcado simulado faz a leitura dos sensores e controla os periféricos de saída de acordo com os comandos recebidos via app.
 - O LED roxo que é controledo por PWM e o relé que é controlado por comando via App. 
@@ -23,8 +17,9 @@
 - [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
 <img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
-<br>
-<br>
+---
+
+## OppPP de visualização dos dados.
 - O app é bem simples.
 - É feito uso do protocolo MQTT para envio e recebimendo de dados de sensores e controle dos periféricos de saídas.
 - Com ele é possivel controlar a intensidade do brilho do led roxo, a Seekbar do app controla o nivel do PWM.
