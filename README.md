@@ -9,6 +9,8 @@
 ---
 
 ## 1️⃣ Visão Geral da Solução
+- O projeto atual visa a criação de um sistema capaz de realizar leituras e obter dados climáticos em um app.
+- Ele conecta o ESP32 virtual a internet e usa MQTT para comunicão com um app real disponibilizado abaixo para testes.
 - O objetivo é demostrar o funcionamento de uma simples estação metereologica com visualização dos dados e controle dos periféricos via App Android, fazendo uso do protocolo MQTT.
 - O sistema embarcado simulado faz a leitura dos sensores e controla os periféricos de saída de acordo com os comandos recebidos via app.
 - O LED roxo que é controledo por PWM e o valor do mesmo é recebido via MQTT, enviado pelo app.
