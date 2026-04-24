@@ -1,6 +1,6 @@
 ## 📝 Relatório do Candidato
 
-# ESTAÇÂO METEREOLOGICA <img width="72" height="72" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
+# ESTAÇÂO METEREOLOGICA <img width="48" height="48" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
 
 
 ---
@@ -19,7 +19,12 @@
 - O sistema embarcado simulado faz a leitura dos sensores e controla os periféricos de saída de acordo com os comandos recebidos via app.
 - O LED roxo que é controledo por PWM e o relé que é controlado por comando via App. 
 - O usuário interage com ele por meio do App Android disponibilizado aqui no Google Drive:
-- [App Estção Metereologica - 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
+- [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
+- [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
+<br>
+<img width="480" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
+<img width="480" alt="Screenshot_20260424_132744_PNAAT IoT Project" src="https://github.com/user-attachments/assets/0f7ec971-1ac0-44c2-b2a1-438b9d3b9825" />
+
 
 ---
 
