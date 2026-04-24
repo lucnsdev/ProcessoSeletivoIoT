@@ -54,9 +54,13 @@ Arquitetura lógica do projeto:
 
 Liste os principais componentes definidos no `diagram.json`, por exemplo:
 
-- Tipo de placa utilizada  
-- LEDs, botões, sensores, atuadores, etc.  
-- Função de cada componente no sistema  
+- O embarcado escolhido foi o ESP32 pois ele possui radio integrado, possibilitando conexões WiFi.
+- Existe um sensor de temperatura e humidade o (`DHT22`).
+- O angulo do servo motor define o angulo de posicionamento do sensor de raios UV em relação ao posicionamento do sol. Para posicionar outros sensores de luz.
+- Há um array de switch's Eles são conectados a pinos configurados com (`PULL_UP`) o que torna desnecessario o resistor de 10KOhms acoplado para manter o pino em nivel baixo ou alto.
+- O LED RGB foi adicionado apenas para haver uma interação local do proprio simulador. Ele varia sua cor de acordo com a temperatura registrada no sensor.
+- Foi colocado um LED roxo para controla-lo analogicamente via PWM, simulando algum tipo de alteração que pode ser necéssario em algum ajuste de sensor de uma estação metereologica.
+- O relé esta ali apenas para simular o acionamento de um motor 220V que severia para realizar a abertura de uma janela no teto superior da estrutura da estação metereologica. O LED acoplado a ele seria o motor que seria usado para acionar a abertuta de alguma janela ou portão que expõe os sensores a céu aberto.
 
 ---
 
@@ -64,9 +68,9 @@ Liste os principais componentes definidos no `diagram.json`, por exemplo:
 
 Explique brevemente decisões importantes tomadas durante o desenvolvimento, como:
 
-- Organização do código  
-- Uso de funções, estados ou constantes  
-- Estratégias para temporização ou controle lógico  
+- Organização do código foi feita de forma que ficasse legivel a qualquer pessoa e de facil compreensão.
+- AS funções foram criadas para separar cada bloco de execução e facilitar a compreensão de quem for ler.  
+- A Estratégia para temporização é bem simples. Como não há a necessidade de leituras constantes de sensores ou de dezenas de envios dos dados por segundo, foi adicionado um (`time.sleep(1)`) para retardar a execução. Tempos menores que 1 segundo pode fazer o servidor MQTT desconectar o cliente.
 
 ---
 
@@ -74,9 +78,10 @@ Explique brevemente decisões importantes tomadas durante o desenvolvimento, com
 
 Descreva o comportamento final do sistema:
 
-- O que funciona corretamente  
-- Quais requisitos foram atendidos  
-- Resultado observado na simulação do Wokwi  
+- Tudo funciona corretamente.
+- Todos os requisitos são atendidos.
+- Os resultados observados na simulação pode ser visualizado no próprio Wokwi por meio do link:
+- [WOKWI - Simulador de Estação Metereologica, por @lucns](https://wokwi.com/projects/462025088630933505)
 
 ---
 
