@@ -22,8 +22,8 @@
 - [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
 - [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
-<img width="480" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
-<img width="480" alt="Screenshot_20260424_132744_PNAAT IoT Project" src="https://github.com/user-attachments/assets/0f7ec971-1ac0-44c2-b2a1-438b9d3b9825" />
+<img width="240" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
+<img width="240" alt="Screenshot_20260424_132744_PNAAT IoT Project" src="https://github.com/user-attachments/assets/0f7ec971-1ac0-44c2-b2a1-438b9d3b9825" />
 
 
 ---
