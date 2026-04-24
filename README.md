@@ -88,9 +88,7 @@ Descreva o comportamento final do sistema:
 
 ## 6️⃣ Comentários Adicionais (Opcional)
 
-Utilize este espaço para comentar, se desejar:
-
-- Dificuldades encontradas  
-- Limitações da solução  
+- A unica dificuldade foi entender qual o problema do Actions.  
+- As limitações se dá por conta dos poucos componentes existentes no WOKWI e também a lentidão nas simulações. Como sujestão deixo o [TinckerCad](https://www.tinkercad.com/circuits).
 - Melhorias que você faria com mais tempo  
 - Principais aprendizados durante o desafio
