@@ -11,7 +11,9 @@
 ## 1️⃣ Visão Geral da Solução
 - O objetivo é demostrar o funcionamento de uma simples estação metereologica com visualização dos dados e controle dos periféricos via App Android.
 - O sistema embarcado simulado faz a leitura dos sensores e controla os periféricos de saída de acordo com os comandos recebidos via app.
-- O LED roxo que é controledo por PWM e o relé que é controlado por comando via App. 
+- O LED roxo que é controledo por PWM e o valor do mesmo é recebido via MQTT, enviado pelo app.
+- O relé que é controlado por comando via app.
+- O servo motor também é controlado via app, que envia o valor do angulo e o esp32 aplica por meio de PWM.
 - O usuário interage com ele por meio do App Android disponibilizado aqui no Google Drive:
 - [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
 - [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
