@@ -9,7 +9,7 @@
 ---
 
 ## 1️⃣ Visão Geral da Solução
-- O objetivo é demostrar o funcionamento de uma simples estação metereologica com visualização dos dados e controle dos periféricos via App Android.
+- O objetivo é demostrar o funcionamento de uma simples estação metereologica com visualização dos dados e controle dos periféricos via App Android, fazendo uso do protocolo MQTT.
 - O sistema embarcado simulado faz a leitura dos sensores e controla os periféricos de saída de acordo com os comandos recebidos via app.
 - O LED roxo que é controledo por PWM e o valor do mesmo é recebido via MQTT, enviado pelo app.
 - O relé que é controlado por comando via app.
