@@ -1,6 +1,6 @@
 ## 📝 Relatório do Candidato
 
-# ESTAÇÃO METEREOLOGICA <img width="48" height="48" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
+# ESTAÇÃO METEREOLOGICA <img width="24" height="24" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
 
 ### 👤 Identificação do Candidato
 - **Nome completo:**  LUCAS DO NASCIMENTO SOUZA
@@ -19,7 +19,7 @@
 <img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
 ---
 
-## O app de visualização dos dados.
+## O app de visualização dos dados, controle do relé, servo e led.
 - O app é bem simples.
 - É feito uso do protocolo MQTT para envio e recebimendo de dados de sensores e controle dos periféricos de saídas.
 - Com ele é possivel controlar a intensidade do brilho do led roxo, a Seekbar do app controla o nivel do PWM.
