@@ -1,7 +1,6 @@
 # Desenvolvivo por @lucns
 
-print("Teste") # Sem isso o Github Actions rejeita a importação de arquivos secundários.
-
+# Foram usados apenas imports de libs nativas do proprio Micropython
 import network
 import time
 from machine import Pin, PWM
@@ -12,11 +11,11 @@ from umqtt.simple import MQTTClient
 
 # Parametros do servidor MQTT
 MQTT_CLIENT_ID = "lucns_pnaat"
-MQTT_BROKER    = "broker.emqx.io"
-MQTT_USER      = ""
-MQTT_PASSWORD  = ""
-MQTT_TOPIC_TX  = "/lucns/estacao_metereologica/android"                            # Topico do MQTT subscrito no android
-MQTT_TOPIC_RX  = "/lucns/estacao_metereologica/esp32"                              # Topico do MQTT subscrito no embarcado
+MQTT_BROKER    = "broker.emqx.io"                                      # Host do servidor MQTT
+MQTT_USER      = ""                                                    # plano gratuito nao e
+MQTT_PASSWORD  = ""                                                    # necessario credenciais
+MQTT_TOPIC_TX  = "/lucns/estacao_metereologica/android"                # Topico do MQTT subscrito no android
+MQTT_TOPIC_RX  = "/lucns/estacao_metereologica/esp32"                  # Topico do MQTT subscrito no embarcado
 
 servo = PWM(Pin(12), freq=50, duty=0)
 purpleLed = PWM(Pin(22), freq=50, duty=0)
@@ -36,7 +35,7 @@ relayState = False
 pwmLed = 0
 servoAngle = 0
 
-def mapValue(inMax, outMax, value):    
+def mapValue(inMax, outMax, value): # Funcao auxiliar 
     inMin = 0
     outMin = 0
     return (value - inMin) * (outMax - outMin) / (inMax - inMin) + outMin
@@ -45,7 +44,7 @@ def moveServo(angle):
     #servo.duty(int(mapValue(180, 1023, angle)))
     servo.duty(int(((angle) / 180 * 2 + 0.5) / 20 * 1023))
 
-def onReceive(topic, message):
+def onReceive(topic, message): # Chamada quando novas mensagens sao recebidas do App Android
     data = ujson.loads(message.decode("utf-8"))
     print(data)
     if "relay_state" in data:
@@ -64,7 +63,7 @@ def onReceive(topic, message):
         purpleLed.duty(int(mapValue(255, 100, pwmLed)))
         print("PWM do led roxo ajustado para {}".format(pwmLed))
 
-def connectWifi():
+def connectWifi(): # Apenas para conectar ao WiFi
     print("Conectando ao WiFi", end="")
     sta_if = network.WLAN(network.STA_IF)
     sta_if.active(True)
@@ -74,7 +73,7 @@ def connectWifi():
         time.sleep(0.1)
     print(" Conectado!")
 
-def updateLed(temp):    
+def updateLed(temp): # Atualiza os PWMs do led RGB de acordo com a temperatura obtida no sensor
     temp += 40
     r = temp * 4
     g = 0
@@ -104,13 +103,13 @@ def main():
         temperature = sensor.temperature()
         updateLed(temperature)
         
-        message = ujson.dumps({
+        message = ujson.dumps({                   # Pacote de dados no formato JSON 
             "temperature": temperature,
             "humidity": int(sensor.humidity()),
-            "switch_1": switch1.value() == 0, # Nivel logico LOW é considerado HIGH
-            "switch_2": switch2.value() == 0, # pois os pinos de entrada estão
-            "switch_3": switch3.value() == 0, # configurados para usar o resistor
-            "switch_4": switch4.value() == 0, # interno como PULL_UP
+            "switch_1": switch1.value() == 0,     # Nivel logico LOW é considerado HIGH
+            "switch_2": switch2.value() == 0,     # pois os pinos de entrada estão
+            "switch_3": switch3.value() == 0,     # configurados para usar o resistor
+            "switch_4": switch4.value() == 0,     # interno como PULL_UP
             "switch_5": switch5.value() == 0,
             "switch_6": switch6.value() == 0,
             "switch_7": switch7.value() == 0,
@@ -121,12 +120,13 @@ def main():
         })
         if message != prev_weather:
             print("Enviando novos valores {}".format(message))
-            client.publish(MQTT_TOPIC_TX, message)
+            client.publish(MQTT_TOPIC_TX, message)                 # Enviar dados ao App Android
             prev_weather = message
         else:
             print("Nenhuma alteracao ocorrida nos valores dos sensores.")
-        client.check_msg() # checa se há novas mensagens recebidas no topico
-        time.sleep(1) # Menor que 1 pode fazer o servidor MQTT desconectar o cliente.
+        client.check_msg()         # checa se há novas mensagens recebidas no topico
+        time.sleep(1)              # Menor que 1 pode fazer o servidor MQTT desconectar o cliente.
 
 if __name__ == '__main__':
+    print("Teste")                 # Sem isso o Github Actions considera timeout na execucao do teste
     main()
