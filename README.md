@@ -14,9 +14,6 @@
 - O LED roxo que é controledo por PWM e o valor do mesmo é recebido via MQTT, enviado pelo app.
 - O relé que é controlado por comando via app.
 - O servo motor também é controlado via app, que envia o valor do angulo e o esp32 aplica por meio de PWM.
-- O usuário interage com ele por meio do App Android disponibilizado aqui no Google Drive:
-- [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
-- [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
 <img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
 
@@ -28,6 +25,9 @@
 - Com ele é possivel controlar a intensidade do brilho do led roxo, a Seekbar do app controla o nivel do PWM.
 - O angulo de inclinação do eixo do servo motor é controlado pela ArcSeekBar do app. No app se controla o angulo de inclinação.
 - O Esp32 recebe os dados no formato JSON e extrai os dados de controle para os periféricos de saída.
+- O usuário interage com ele por meio do App Android disponibilizado aqui no Google Drive:
+- [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
+- [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
 <img width="240" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
 <img width="240" alt="Screenshot_20260424_132744_PNAAT IoT Project" src="https://github.com/user-attachments/assets/0f7ec971-1ac0-44c2-b2a1-438b9d3b9825" />
