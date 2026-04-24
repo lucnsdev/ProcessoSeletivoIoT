@@ -19,13 +19,13 @@
 
 ---
 
-## O app de visualização dos dados, controle do relé, servo e led.
+## O app de visualização dos dados, controle do relé, servo motor e led.
 - O app é bem simples.
 - É feito uso do protocolo MQTT para envio e recebimendo de dados de sensores e controle dos periféricos de saídas.
 - Com ele é possivel controlar a intensidade do brilho do led roxo, a Seekbar do app controla o nivel do PWM.
-- O angulo de inclinação do eixo do servo motor é controlado pela ArcSeekBar do app. No app se controla o angulo de inclinação.
-- O Esp32 recebe os dados no formato JSON e extrai os dados de controle para os periféricos de saída.
-- O usuário interage com ele por meio do App Android disponibilizado aqui no Google Drive:
+- O angulo de inclinação do eixo do servo motor é controlado pela ArcSeekBar do app.
+- O Esp32 se conecta a rede virtual WiFi, depois se conecta ao Broker e envia/recebe os dados no formato JSON e extrai os dados de controle para controlar os periféricos de saída.
+- O usuário interage com o simulador alterando os valores do sensor de temperatura e humidade, também  é possível interagir através do array de switch's que há no circuito, e claro, por meio do App Android disponibilizado o APK no Google Drive e repositório do Github:
 - [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
 - [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
@@ -39,12 +39,15 @@
 
 Arquitetura lógica do projeto:
 
-- Inicialmente o código executa as inicializações necessárias dos sensores e pinos, definindo quais serão saídas e entradas.
+- Inicialmente o código, no enbarcado, executa as inicializações necessárias dos sensores e pinos, definindo quais serão saídas e entradas.
 - Depois inicia o controlador Wifi do Esp32 e se conecta a uma rede WiFi virtual (`sta_if.connect`)
 - Logo após a conexão com a internet ser estabelecida, o sistema se conecta a um Broker MQTT. E subscreve o topico (`/lucns/estacao_metereologica/android`)
-- Após as inicializações o sistema entra no bloco de repetição infinita (`while(True)`).
-- Alguns ds componentes interagem entre si por meio das variações da temperatura. O LED RGB varia suas cores de acordo com a temperatura.
+- Após as inicializações o sistema entra no bloco de repetição infinita, uma loop (`while(True)`).
+- Alguns dos componentes interagem entre si por meio das variações da temperatura. O LED RGB varia suas cores de acordo com a temperatura.
 
+## 2️⃣.1️⃣ Principais Logicas
+- Os dados são enviados ao app se qualquer dado tiver seu valor alterado. Por exemplo, se a temperatura for alterada, ou a humidade, ou o estado de algum switch for mudado, o app receberá as alterações. Praticamente em tempo real.
+- **O delay maximo entre uma alteração de valores no circuito e a mostragem dos dados atualizados na tela do smartphone é de no maximo 2 segundos.**
 ---
 
 ## 3️⃣ Componentes Utilizados na Simulação
