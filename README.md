@@ -1,6 +1,6 @@
 ## 📝 Relatório do Candidato
 
-# ESTAÇÃO METEREOLOGICA <img width="24" height="24" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
+# ESTAÇÃO METEREOLOGICA ![icon_app](https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3)
 
 ### 👤 Identificação do Candidato
 - **Nome completo:**  LUCAS DO NASCIMENTO SOUZA
