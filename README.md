@@ -21,6 +21,7 @@
 
 ## O app de visualização dos dados, controle do relé, servo motor e led.
 - O app é bem simples.
+- Foi desenvolvido em Java puro, sem uso de libs e sem frameworks o que torna o app extremamente leve (`142Kb`) apenas e sem dependencias.
 - É feito uso do protocolo MQTT para envio e recebimendo de dados de sensores e controle dos periféricos de saídas.
 - Com ele é possivel controlar a intensidade do brilho do led roxo, a Seekbar do app controla o nivel do PWM.
 - O angulo de inclinação do eixo do servo motor é controlado pela ArcSeekBar do app.
@@ -80,7 +81,7 @@ Descreva o comportamento final do sistema:
 
 - Tudo funciona corretamente.
 - Todos os requisitos são atendidos.
-- Os resultados observados na simulação pode ser visualizado no próprio Wokwi por meio do link:
+- Os resultados observados na simulação pode ser visualizado no próprio Wokwi por meio do link abaixo e a interação da interface grafica peo app disponibilizado.
 - [WOKWI - Simulador de Estação Metereologica, por @lucns](https://wokwi.com/projects/462025088630933505)
 
 ---
@@ -92,24 +93,4 @@ Utilize este espaço para comentar, se desejar:
 - Dificuldades encontradas  
 - Limitações da solução  
 - Melhorias que você faria com mais tempo  
-- Principais aprendizados durante o desafio  
-
----
-
-> ✅ Este relatório faz parte da avaliação técnica.  
-> Clareza, objetividade e organização são tão importantes quanto o funcionamento do código.
-
----
-
-## 🆘 Suporte
-
-Em caso de dúvidas:
-
-- Consulte o material dos cursos EAD
-- Leia atentamente este README
-- Analise os logs das GitHub Actions
-- Utilize os canais oficiais para contato com os instrutores
-
-Boa sorte no processo seletivo.
-Mostre sua capacidade de pensar como um engenheiro de sistemas embarcados.
-****
+- Principais aprendizados durante o desafio
