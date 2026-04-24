@@ -1,6 +1,6 @@
 ## 📝 Relatório do Candidato
 
-# ESTAÇÂO METEREOLOGICA <img width="162" height="162" alt="ic_launcher_foreground" src="https://github.com/user-attachments/assets/5e4836bf-3130-425f-8b70-d95bab10b9fc" />
+# ESTAÇÂO METEREOLOGICA <img width="72" height="72" alt="ic_launcher_round" src="https://github.com/user-attachments/assets/54547d9b-73a4-44f0-9d83-cae41c8efea3" />
 
 
 ---
