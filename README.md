@@ -16,6 +16,7 @@
 - O LED roxo que é controledo por PWM e o valor do mesmo é recebido via MQTT, enviado pelo app.
 - O relé que é controlado por comando via app.
 - O servo motor também é controlado via app, que envia o valor do angulo e o esp32 aplica por meio de PWM.
+- [WOKWI - Simulador de Estação Metereologica, por @lucns](https://wokwi.com/projects/462025088630933505)
 <br>
 <img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
 
@@ -85,8 +86,7 @@ Descreva o comportamento final do sistema:
 
 - Tudo funciona corretamente.
 - Todos os requisitos são atendidos.
-- Os resultados observados na simulação pode ser visualizado no próprio Wokwi por meio do link abaixo e a interação da interface grafica peo app disponibilizado.
-- [WOKWI - Simulador de Estação Metereologica, por @lucns](https://wokwi.com/projects/462025088630933505)
+- Os resultados observados na simulação pode ser visualizado no próprio Wokwi por meio do link do projeto mensionado acima e a interação da interface grafica peo app disponibilizado.
 
 ---
 
