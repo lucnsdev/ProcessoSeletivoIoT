@@ -47,12 +47,12 @@ Arquitetura lógica do projeto:
 
 ## 2️⃣.1️⃣ Principais Logicas
 - Os dados são enviados ao app se qualquer dado tiver seu valor alterado. Por exemplo, se a temperatura for alterada, ou a humidade, ou o estado de algum switch for mudado, o app receberá as alterações. Praticamente em tempo real.
-- **O delay maximo entre uma alteração de valores no circuito e a mostragem dos dados atualizados na tela do smartphone é de no maximo 2 segundos.**
+- **O delay maximo entre uma alteração de valores no circuito simulado e a mostragem dos dados atualizados na tela do smartphone é de no maximo 2 segundos.**
 ---
 
 ## 3️⃣ Componentes Utilizados na Simulação
 
-Liste os principais componentes definidos no `diagram.json`, por exemplo:
+Os principais componentes definidos no `diagram.json`, são:
 
 - O embarcado escolhido foi o ESP32 pois ele possui radio integrado, possibilitando conexões WiFi.
 - Existe um sensor de temperatura e humidade o (`DHT22`).
