@@ -22,9 +22,17 @@
 - [App Estção Metereologica - APK, 142Kb](https://drive.google.com/file/d/1J9Z7MekcTMKlXneIEJD-uHdjjl-hFbEw/view?usp=drive_link)
 - [Repositório do Código fonte em Java](https://github.com/lucnsdev/App-PNAAT-IoT-Project)
 <br>
+<img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
+<br>
+<br>
+- O app é bem simples.
+- É feito uso do protocolo MQTT para envio e recebimendo de dados de sensores e controle dos periféricos de saídas.
+- Com ele é possivel controlar a intensidade do brilho do led roxo, a Seekbar do app controla o nivel do PWM.
+- O angulo de inclinação do eixo do servo motor é controlado pela ArcSeekBar do app. No app se controla o angulo de inclinação.
+- O Esp32 recebe os dados no formato JSON e extrai os dados de controle para os periféricos de saída.
+<br>
 <img width="240" alt="Screenshot_20260424_132946_PNAAT IoT Project" src="https://github.com/user-attachments/assets/903a7e83-9beb-46eb-9c6a-27d928594d0f" />
 <img width="240" alt="Screenshot_20260424_132744_PNAAT IoT Project" src="https://github.com/user-attachments/assets/0f7ec971-1ac0-44c2-b2a1-438b9d3b9825" />
-<img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
 
 
 ---
