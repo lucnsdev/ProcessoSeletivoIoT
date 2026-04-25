@@ -17,6 +17,7 @@
 - O relé que é controlado por comando também via app.
 - O servo motor é controlado pelo app, que envia o valor do angulo e o esp32 converte e aplica o sinal por meio de PWM.
 - O projeto pode ser acessado no [WOKWI - Simulador de Estação Metereologica, por @lucns.](https://wokwi.com/projects/462025088630933505)
+- [Video de Demostração](https://drive.google.com/file/d/1i17uFNQjWfP_Gl5djmcWAuQpLeMvyj37/view?usp=sharing)
 <br>
 <img height="480" alt="Captura de tela 2026-04-24 125124" src="https://github.com/user-attachments/assets/86dfe8db-120e-4852-9888-e25d82bcf82d" />
 
