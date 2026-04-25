@@ -46,7 +46,7 @@
 
 Arquitetura lógica do projeto:
 
-- Inicialmente o código, no enbarcado, executa as inicializações necessárias dos sensores e pinos, definindo quais serão saídas e entradas.
+- Inicialmente o código, no embarcado, executa as inicializações necessárias dos sensores e pinos, definindo quais serão saídas ou entradas.
 - Depois inicia o controlador Wifi do Esp32 e se conecta a uma rede WiFi virtual (`sta_if.connect`)
 - Logo após a conexão com a internet ser estabelecida, o sistema se conecta a um Broker MQTT. E subscreve o topico (`/lucns/estacao_metereologica/android`)
 - Após as inicializações o sistema entra no bloco de repetição infinita, uma loop (`while(True)`).
